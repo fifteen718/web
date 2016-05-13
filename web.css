@@ -1,0 +1,43 @@
+ul li {
+    padding-bottom: 15px;
+    list-style-type: circle;
+}
+
+ul li:hover {
+    list-style-type: disc;
+}
+
+a {
+    text-decoration: none;
+    font-family: 微软雅黑;
+    font-size: 14px;
+    color: black;
+}
+
+a:hover {
+    font-size: 16px;
+    background-color: black;
+    color: white;
+}
+
+.row1, .row2, .row3 {
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.life, .study, .work, .pay, .media, .goodWeb, .resource, .school, .company, .others {
+    float: left;
+    margin-left: 10%;
+}
+
+.row1 {
+    background-color: #FFFFFF;
+}
+
+.row2 {
+    background-color: #D9D6CF;
+}
+
+.row3 {
+    background-color: #FFFFFF;
+}
