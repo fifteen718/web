@@ -7,14 +7,14 @@ ul li:hover {
     list-style-type: disc;
 }
 
-a {
+ul li a {
     text-decoration: none;
     font-family: 微软雅黑;
     font-size: 14px;
     color: black;
 }
 
-a:hover {
+ul li a:hover {
     font-size: 16px;
     background-color: black;
     color: white;
@@ -40,4 +40,19 @@ a:hover {
 
 .row3 {
     background-color: #FFFFFF;
+}
+
+.end {
+    text-align: center;
+}
+
+.end a {
+    font-size: 12px;
+    font-family: Arial;
+    color: gray;
+    text-decoration: none;
+}
+
+.end a:hover {
+    color: black;
 }
