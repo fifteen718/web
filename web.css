@@ -5,6 +5,7 @@ ul li {
 
 ul li:hover {
     list-style-type: disc;
+    color:#41CB83;
 }
 
 ul li a {
@@ -15,9 +16,10 @@ ul li a {
 }
 
 ul li a:hover {
-    font-size: 16px;
-    background-color: black;
     color: white;
+    background-color: #41CB83;
+    border: 4px solid #41CB83;
+    border-radius: 4px;
 }
 
 .row1, .row2, .row3, .end {
@@ -35,7 +37,7 @@ ul li a:hover {
 }
 
 .row2 {
-    background-color: #D9D6CF;
+    background-color: #FAFAFA;
 }
 
 .row3 {
@@ -54,5 +56,5 @@ ul li a:hover {
 }
 
 .end a:hover {
-    color: black;
+    color: #41CB83;
 }
