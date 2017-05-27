@@ -27,7 +27,7 @@ ul li a:hover {
     overflow: hidden;
 }
 
-.life, .study, .work, .pay, .media, .goodWeb, .resource, .school, .company, .others {
+.life, .study, .work, .pay, .media, .goodWeb, .resource, .school, .company, .person, .others {
     float: left;
     margin-left: 10%;
 }
