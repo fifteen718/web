@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>DoYouLikeMe?</title>
+    <script src="jquery.min.js"></script>
+    <style type="text/css">
+        body {
+            background: #f5f5f5;
+        }
+
+        .window {
+            width: 600px;
+            height: 200px;
+            background: white;
+            margin: 10% auto;
+        }
+
+        .close {
+            float: right;
+            margin-right: 12px;
+            font-size: 24px;
+            color: #333;
+        }
+
+        .close:hover {
+            cursor: pointer;
+            color: red;
+        }
+
+        .window p {
+            text-align: center;
+            padding-top: 80px;
+            padding-bottom: 50px;
+        }
+
+        .window button {
+            position: relative;
+            width: 80px;
+            height: 23px;
+        }
+
+        .yesBtn {
+            color: blue;
+            left: 400px;
+        }
+
+        .noBtn {
+            left: 410px;
+        }
+
+        .noBtnPos {
+            width: 80px;
+            height: 123px;
+            float: right;
+            margin-right: 26px;
+            margin-top: -100px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="window">
+        <label class="close">×</label>
+        <p>你是不是喜欢我？</p>
+        <button class="yesBtn">是的</button>
+        <button class="noBtn">不是</button>
+        <div class="noBtnPos"></div>
+    </div>
+
+</body>
+<script type="text/javascript">
+    var n = 0;
+
+    $(".close").click(function () {
+        alert("关闭窗口也改变不了你喜欢我的事实");
+    });
+
+    $(".noBtn").mouseover(function () {
+        if ($(".noBtn").css("bottom") == "100px") {
+            $(".noBtn").animate({ bottom: '0px' });
+        } else if (n % 2 == 0 && $(".noBtn").css("bottom") == "0px") {
+            $(".noBtn").animate({ bottom: '100px' });
+            n = 1;
+        } else {
+            if ($(".noBtn").text() == "不是") {
+                $(".noBtn").text("是");
+                $(".yesBtn").text("不是");
+                $(".noBtn").css("color", "blue");
+                $(".yesBtn").css("color", "black");
+                n = Math.ceil(Math.random() * 10);
+            }
+        }
+    });
+
+    $(".yesBtn").mouseover(function () {
+        if ($(".yesBtn").text() == "不是") {
+            $(".yesBtn").text("是");
+            $(".noBtn").text("不是");
+            $(".yesBtn").css("color", "blue");
+            $(".noBtn").css("color", "black");
+        }
+    })
+
+    $(".noBtnPos").mouseout(function () {
+        if ($(".noBtn").css("bottom") == "100px") {
+            $(".noBtn").animate({ bottom: '0px' });
+        }
+    });
+
+    $(".yesBtn").click(function () {
+        if (confirm("你确定要喜欢我吗？")) {
+            if (confirm("你真的确定要喜欢我吗？")) {
+                if (confirm("你真的真的确定要喜欢我吗？")) {
+                    if (confirm("你真的真的真的确定要喜欢我吗？")) {
+                        if (confirm("你真的真的真的真的确定要喜欢我吗？")) {
+                            if (confirm("你真的真的真的真的真的确定要喜欢我吗？")) {
+                                if (confirm("你真的真的真的真的真的真的确定要喜欢我吗？")) {
+                                    if (confirm("你真的真的真的真的真的真的真的确定要喜欢我吗？")) {
+                                        if (confirm("你真的真的真的真的真的真的真的真的确定要喜欢我吗？")) {
+                                            if (confirm("你真的真的真的真的真的真的真的真的真的确定要喜欢我吗？")) {
+                                                alert("好的 我信你了");
+                                            } else {
+                                                alert("你还会回来的");
+                                            }
+                                        } else {
+                                            alert("你还会回来的");
+                                        }
+                                    } else {
+                                        alert("你还会回来的");
+                                    }
+                                } else {
+                                    alert("你还会回来的");
+                                }
+                            } else {
+                                alert("你还会回来的");
+                            }
+                        } else {
+                            alert("你还会回来的");
+                        }
+                    } else {
+                        alert("你还会回来的");
+                    }
+                } else {
+                    alert("你还会回来的");
+                }
+            } else {
+                alert("你还会回来的");
+            }
+        } else {
+            alert("你还会回来的");
+        }
+    });
+
+</script>
+
+</html>
