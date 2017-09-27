@@ -87,7 +87,7 @@
             n = 1;
         } else {
             if ($(".noBtn").text() == "不是") {
-                $(".noBtn").text("是");
+                $(".noBtn").text("是的");
                 $(".yesBtn").text("不是");
                 $(".noBtn").css("color", "blue");
                 $(".yesBtn").css("color", "black");
@@ -98,7 +98,7 @@
 
     $(".yesBtn").mouseover(function () {
         if ($(".yesBtn").text() == "不是") {
-            $(".yesBtn").text("是");
+            $(".yesBtn").text("是的");
             $(".noBtn").text("不是");
             $(".yesBtn").css("color", "blue");
             $(".noBtn").css("color", "black");
@@ -111,7 +111,7 @@
         }
     });
 
-    $(".yesBtn").click(function () {
+    function confirmYes() {
         if (confirm("你确定要喜欢我吗？")) {
             if (confirm("你真的确定要喜欢我吗？")) {
                 if (confirm("你真的真的确定要喜欢我吗？")) {
@@ -152,6 +152,18 @@
             }
         } else {
             alert("你还会回来的");
+        }
+    }
+
+    $(".yesBtn").click(function () {
+        if ($(".yesBtn").text() == "是的") {
+            confirmYes();
+        }
+    });
+    
+    $(".noBtn").click(function () {
+        if ($(".noBtn").text() == "是的") {
+            confirmYes();
         }
     });
 
